@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to top, #3097dcb3 0%, #ffffff 100%);
+
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.container .calendar{
+    width: 546px;
+    height: 622px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+}
+
+.container .digital_clock{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.digital_clock:hover{
+    background: linear-gradient(to top, #3097dcb3 0%, #ffffff 100%);
+}
+
+.digital_clock .time{
+    font-size: 50px;
+    color: #000000;
+}
+
+.digital_clock .time .format{
+    font-size: 25px;
+}
+
+.calendar .month{
+    width: 100%;
+    background-color: #3097dcda;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    padding: 84px 30px 40px 30px;
+    text-align: center;
+}
+
+.month h2{
+    font-size: 32px;
+    margin-top: 25px;
+}
+
+.month p{
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+.month .arrow{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #000000da;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.month .arrow:hover{
+    background-color: #ffffffda;
+}
+
+
+
+.container .week{
+    display: flex;
+    background-color: #000000;
+    color: #fff;
+}
+
+.week div{
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0px;
+    transition: 0.4s;
+}
+
+.week .active{
+    background-color: #000000;
+}
+
+.week div:hover{
+    background-color: #fffbfb;
+}
+
+
+.container .dates{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.dates div{
+    width: 74px;
+    height: 55px;
+    margin: 2px;
+    margin-top: 1.7px;
+    text-align: center;
+    line-height: 53px;
+    border: 3px solid #0000008d;
+}
+
+.dates .today{
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.dates .today:hover{
+    background-color: #000000;
+    font-size: 200px;
+    font-weight: 600;
+}
+
+.dates div:hover:not(.today){
+    border: 3px dashed #111;
+    background-color: #3097dc60;
+    color: #000000b6;
+    font-size: 120px;
+    cursor: pointer;
+    -webkit-box-reflect: below 4px linear-gradient(transparent, #0000004d);
+}
+
+.dates div:nth-child(n+36):hover{
+    -webkit-box-reflect: above 4px linear-gradient(transparent, #0000008c);
+}
+
+
+.calendar .dates div:nth-child(n+43){
+    border: none !important;
+    cursor: auto !important;
+    background: none !important;
+}
+
+.dates .prev, .dates .next{
+    opacity: 0.5;
+}
+
+.dates .prev:hover,
+.dates .next:hover{
+    opacity: 1;
+}
+
